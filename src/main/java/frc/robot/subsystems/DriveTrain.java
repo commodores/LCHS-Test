@@ -46,8 +46,8 @@ public class DriveTrain extends SubsystemBase {
     frontRightMotor.setNeutralMode(NeutralMode.Brake);
     rearRightMotor.setNeutralMode(NeutralMode.Brake);
 
-    frontLeftMotor.setInverted(true);
-    rearLeftMotor.setInverted(true);
+    //frontLeftMotor.setInverted(true);
+    //rearLeftMotor.setInverted(true);
 
     m_robotDrive = new MecanumDrive(frontLeftMotor, rearLeftMotor, frontRightMotor, rearRightMotor);
 

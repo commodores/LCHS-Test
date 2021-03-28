@@ -6,7 +6,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -18,13 +18,13 @@ public class Hopper extends SubsystemBase {
   /** Creates a new Hopper. */
 
   private final CANSparkMax hopperMotor;
-  private final TalonSRX feederMotor;
+  private final VictorSPX feederMotor;
 
   public Hopper() {
 
     hopperMotor = new CANSparkMax(HopperConstants.kHopperPort, MotorType.kBrushless);
 
-    feederMotor = new TalonSRX(HopperConstants.kFeederPort);
+    feederMotor = new VictorSPX(HopperConstants.kFeederPort);
 
     hopperMotor.restoreFactoryDefaults();
     feederMotor.configFactoryDefault();
