@@ -82,11 +82,11 @@ public class RobotContainer {
       .whenReleased(() -> m_hopper.stopHopper());
 
     new JoystickButton(xbox, Button.kBumperLeft.value)
-      .whileHeld(() -> m_shooter.setRPM(1000))
+      .whileHeld(() -> m_shooter.setRPM(2000))
       .whenReleased(() -> m_shooter.setRPM(-1));
 
     new JoystickButton(xbox, Button.kBumperRight.value)
-      .whileHeld(() -> m_shooter.setRPM(2000))
+      .whileHeld(() -> m_shooter.setRPM(3000))
       .whenReleased(() -> m_shooter.setRPM(-1));
 
   }

@@ -59,7 +59,7 @@ public class DriveTrain extends SubsystemBase {
   }
   
   public void fieldOriented(double stickY, double stickX, double stickRotate){
-    m_robotDrive.driveCartesian(stickY, stickX, stickRotate, navX.getAngle());
+    m_robotDrive.driveCartesian(stickY, stickX, stickRotate);//, navX.getAngle());
   }
 
   public void zeroYaw() {
